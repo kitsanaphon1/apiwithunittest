@@ -55,3 +55,20 @@ jobs:
         run: |
           docker tag api-unittest:latest sooyaa02/api-unittest:latest
           docker push sooyaa02/api-unittest:latest
+
+      - name: 📧 Send Mail Notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "✅ CI/CD Pipeline Succeeded"
+          to: chol.www02@gmail.com         # ⬅️ เปลี่ยนเป็นอีเมลปลายทาง
+          from: GitHub CI <${{ secrets.MAIL_USERNAME }}>
+          body: |
+            ✅ All CI steps completed successfully.
+            - 🧪 Unit Tests passed
+            - 🐳 Docker Image built and pushed
+            - 🔍 Trivy scan completed
+            - 📦 Image: sooyaa02/api-unittest:latest
