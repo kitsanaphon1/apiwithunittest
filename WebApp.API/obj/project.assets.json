@@ -3237,11 +3237,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Devops tools\\Dev\\WebApp.API\\WebApp.API.csproj",
+      "projectUniqueName": "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.API\\WebApp.API.csproj",
       "projectName": "WebApp.API",
-      "projectPath": "D:\\Devops tools\\Dev\\WebApp.API\\WebApp.API.csproj",
+      "projectPath": "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.API\\WebApp.API.csproj",
       "packagesPath": "C:\\Users\\cholw\\.nuget\\packages\\",
-      "outputPath": "D:\\Devops tools\\Dev\\WebApp.API\\obj\\",
+      "outputPath": "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cholw\\AppData\\Roaming\\NuGet\\NuGet.Config",
