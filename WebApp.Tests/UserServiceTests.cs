@@ -4,11 +4,14 @@ using WebApp.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 
+// 🧪 ชุด Unit Test สำหรับ UserService
+// ทดสอบการทำงาน CRUD ของ service โดยใช้ InMemory DB จำลอง
 public class UserServiceTests
 {
     [Fact]
     public void GetById_ReturnsCorrectUser()
     {
+        // ✅ ทดสอบว่า GetById คืนค่าผู้ใช้ที่ถูกต้อง
         var options = new DbContextOptionsBuilder<AppDbContext>()
             .UseInMemoryDatabase(databaseName: "TestDb_Get")
             .Options;
@@ -28,6 +31,7 @@ public class UserServiceTests
     [Fact]
     public void Create_AddsNewUserToDb()
     {
+        // ✅ ทดสอบว่า Create เพิ่ม user ใหม่เข้า DB ได้
         var options = new DbContextOptionsBuilder<AppDbContext>()
             .UseInMemoryDatabase(databaseName: "TestDb_Create")
             .Options;
@@ -47,6 +51,7 @@ public class UserServiceTests
     [Fact]
     public void Delete_RemovesUserFromDb()
     {
+        // ✅ ทดสอบว่า Delete สามารถลบ user ออกจาก DB ได้
         var options = new DbContextOptionsBuilder<AppDbContext>()
             .UseInMemoryDatabase(databaseName: "TestDb_Delete")
             .Options;
@@ -66,6 +71,7 @@ public class UserServiceTests
     [Fact]
     public void GetAll_ReturnsAllUsers()
     {
+        // ✅ ทดสอบว่า GetAll คืนผู้ใช้ทั้งหมดที่อยู่ใน DB
         var options = new DbContextOptionsBuilder<AppDbContext>()
             .UseInMemoryDatabase(databaseName: "TestDb_All")
             .Options;
