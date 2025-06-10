@@ -24,8 +24,21 @@ jobs:
       - name: 📦 Restore Dependencies
         run: dotnet restore
 
-      - name: 🧪 Run Unit Tests
-        run: dotnet test --no-build --verbosity normal
+      - name: 🧪 Run Unit Tests and Export TRX
+        run: dotnet test --no-build --logger "trx" --results-directory TestResults
+
+      - name: 📊 Generate HTML Report from TRX
+        uses: danielpalme/reportgenerator-action@5.1.23
+        with:
+          reports: 'TestResults/*.trx'
+          targetdir: 'TestResultsHtml'
+          reporttypes: 'Html'
+
+      - name: 📎 Upload HTML Test Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: html-test-report
+          path: TestResultsHtml
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -64,11 +77,12 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: "✅ CI/CD Pipeline Succeeded"
-          to: chol.www02@gmail.com         # ⬅️ เปลี่ยนเป็นอีเมลปลายทาง
+          to: chol.www02@gmail.com
           from: GitHub CI <${{ secrets.MAIL_USERNAME }}>
           body: |
             ✅ All CI steps completed successfully.
             - 🧪 Unit Tests passed
+            - 📊 Test Report generated
             - 🐳 Docker Image built and pushed
             - 🔍 Trivy scan completed
             - 📦 Image: sooyaa02/api-unittest:latest
