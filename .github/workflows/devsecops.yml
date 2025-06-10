@@ -37,7 +37,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker Image
-        run: docker build -t api-unittest:latest .
+        run: docker build -t api-unittest:latest ./WebApp.API
 
       - name: Scan with Trivy
         uses: aquasecurity/trivy-action@master
