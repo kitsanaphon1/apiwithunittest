@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Devops tools\\Dev\\WebApp.Tests\\WebApp.Tests.csproj": {}
+    "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.Tests\\WebApp.Tests.csproj": {}
   },
   "projects": {
-    "D:\\Devops tools\\Dev\\WebApp.API\\WebApp.API.csproj": {
+    "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.API\\WebApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Devops tools\\Dev\\WebApp.API\\WebApp.API.csproj",
+        "projectUniqueName": "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.API\\WebApp.API.csproj",
         "projectName": "WebApp.API",
-        "projectPath": "D:\\Devops tools\\Dev\\WebApp.API\\WebApp.API.csproj",
+        "projectPath": "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.API\\WebApp.API.csproj",
         "packagesPath": "C:\\Users\\cholw\\.nuget\\packages\\",
-        "outputPath": "D:\\Devops tools\\Dev\\WebApp.API\\obj\\",
+        "outputPath": "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cholw\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,14 +89,14 @@
         }
       }
     },
-    "D:\\Devops tools\\Dev\\WebApp.Tests\\WebApp.Tests.csproj": {
+    "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.Tests\\WebApp.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Devops tools\\Dev\\WebApp.Tests\\WebApp.Tests.csproj",
+        "projectUniqueName": "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.Tests\\WebApp.Tests.csproj",
         "projectName": "WebApp.Tests",
-        "projectPath": "D:\\Devops tools\\Dev\\WebApp.Tests\\WebApp.Tests.csproj",
+        "projectPath": "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.Tests\\WebApp.Tests.csproj",
         "packagesPath": "C:\\Users\\cholw\\.nuget\\packages\\",
-        "outputPath": "D:\\Devops tools\\Dev\\WebApp.Tests\\obj\\",
+        "outputPath": "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cholw\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -114,8 +114,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\Devops tools\\Dev\\WebApp.API\\WebApp.API.csproj": {
-                "projectPath": "D:\\Devops tools\\Dev\\WebApp.API\\WebApp.API.csproj"
+              "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.API\\WebApp.API.csproj": {
+                "projectPath": "D:\\Devops tools\\Dev\\apiwithunittest\\WebApp.API\\WebApp.API.csproj"
               }
             }
           }
